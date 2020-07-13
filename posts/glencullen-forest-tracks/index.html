@@ -4,7 +4,20 @@ The area is marked by ruins of the 19th century Ballycorus lead mine flue chimne
 From the top of the hill there are panoramic views of south Dublin and north Wicklow.
 <br><br>
 
-<iframe width="100%" height="400px" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/en/map/glencullen-forest-tracks_480147?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=false&tilelayersControl=false&embedControl=false&datalayersControl=false&onLoadPanel=undefined&captionBar=false&fullscreenControl=true&locateControl=false&measureControl=false&editinosmControl=false"></iframe>
+<style>
+#overlay {
+background:transparent;
+position:relative;
+width:640px; /* your iframe width */
+height:400px; /* your iframe height */
+top:400px; /* your iframe height */
+margin-top:-400px; /* your iframe height */
+}
+</style>
+
+<div class="overlay" onClick="style.pointerEvents='none'"></div>
+
+<iframe id= "mapsource" width="100%" height="400px" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/en/map/glencullen-forest-tracks_480147?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=false&tilelayersControl=false&embedControl=false&datalayersControl=false&onLoadPanel=undefined&captionBar=false&fullscreenControl=true&locateControl=false&measureControl=false&editinosmControl=false"></iframe>
 
 <html>
 <head>
@@ -3239,9 +3252,17 @@ From the top of the hill there are panoramic views of south Dublin and north Wic
 ]);
 
 var options = {
+theme: 'maximized',
 title: 'Elevation (meters) vs. Distance (kilometers)',
 // hAxis: {title: 'Distance (kilometers)'},
 // vAxis: {title: 'Elevation (meters)'},
+vAxis: {
+	viewWindowMode: 'explicit',
+    viewWindow: {
+        min: 150,
+        max: 450
+    }
+},
 pointSize: 2,
 legend: 'none',
 //trendlines: { 0: { color: 'green', opacity: 0.2, } },
@@ -3267,7 +3288,7 @@ chart.draw(data, options);
 </script>
 </head>
 <body>
-	<div id="chart_div" style="width: max; height: 400px;"></div>
+	<div id="chart_div" style="width: max; height: 300px;"></div>
 </body>
 </html>
 
