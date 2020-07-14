@@ -1,0 +1,232 @@
+/**
+*  Publish CycleWicklow Theme
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+@font-face {
+    font-family: "Main";
+    src: url(/SSP_Regular.ttf);
+}
+
+@font-face {
+    font-family: "Main";
+    src: url(/SSP_Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Code";
+    src: url(/SCP_Regular.ttf);
+}
+
+html {
+    background-color: var(--website-background-color);
+    color: var(--website-text-color);
+    font-family: Main;
+}
+
+body {
+    background: var(--website-background-color);
+    color: var(--website-text-color:);
+/*    font-family: Helvetica, Arial;*/
+    font-family: Main;
+    text-align: center;
+}
+
+.wrapper {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    text-align: left;
+}
+
+header {
+    background-color: var(--header-color);
+    color: var(--website-text-color);
+}
+
+header .wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header .site-name {
+    font-size: 1.5em;
+    color: var(--website-text-color:);
+    font-weight: bold;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 7px;
+    line-height: 1.5em;
+}
+
+nav li a.selected {
+    text-decoration: none;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none; /* removed underline from links */
+}
+
+.description {
+    margin-bottom: 40px;
+}
+
+.item-list > li {
+    display: block;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--website-content-background-color);
+    color: var(--website-text-color);
+    margin-bottom: 20px;
+}
+
+.item-list > li:last-child {
+    margin-bottom: 0;
+}
+
+.item-list h1 {
+    margin-bottom: 15px;
+    font-size: 2.0em;       /* updated item list font size */
+    color: var(--item-header-text-color);
+}
+
+/* removing this to add bottom space */
+/*.item-list p {*/
+/*    margin-bottom: 0;*/
+/*}*/
+
+.tag-list {
+    margin-bottom: 0px;   /* updated from 15px */
+}
+
+.tag-list li,
+.tag {
+    display: inline-block;
+    background-color: var(--tag-background-color);
+    color: var(--tag-text-color);
+    padding: 4px 6px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.tag-list a,
+.tag a {
+    text-decoration: none;
+}
+
+.item-page .tag-list {
+    display: inline-block;
+}
+
+.content {
+    margin-bottom: 40px;
+}
+
+.browse-all {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.all-tags li {
+    font-size: 1.4em;
+    margin-right: 10px;
+    padding: 6px 10px;
+}
+
+footer {
+    color: var(--website-background-color);
+}
+
+
+:root {
+    --website-background-color: #ffffff;
+    --website-content-background-color: #ececeb;
+    --website-text-color: #000000;
+    --header-color: #bcd1f5;
+    --navigation-items-color: #1e5cc8;
+    --navigation-items-text-color: #ffffff;
+    --hover-color: #e4eaf5;
+    --video-background-color: #ffffff;
+    --tag-background-color: #112d4e;
+    --tag-text-color: #ffffff;
+    --item-header-text-color: #bcd1f5;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --website-background-color: #222831;
+        --website-content-background-color: #393e46;
+        --website-text-color: #ffffff;
+        --header-color: #00adb5;
+        --navigation-items-color: #008A90;
+        --navigation-items-text-color: #ffffff;
+        --hover-color: #6e5773;
+        --video-background-color: #ffffff;
+        --tag-background-color: #112d4e;
+        --tag-text-color: #ffffff;
+        --item-header-text-color: #00adb5;
+    }
+}
+
+
+/*@media (prefers-color-scheme: dark) {*/
+/*    body {*/
+/*        background-color: #222;*/
+/*    }*/
+/**/
+/*    body,*/
+/*    header .site-name {*/
+/*        color: #ddd;*/
+/*    }*/
+/**/
+/*    .item-list > li {*/
+/*        background-color: #333;*/
+/*    }*/
+/**/
+/*    header {*/
+/*        background-color: #000;*/
+/*    }*/
+/*}*/
+
+@media(max-width: 600px) {
+    .wrapper {
+        padding: 40px 20px;
+    }
+}
+
